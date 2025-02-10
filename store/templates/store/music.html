@@ -1,0 +1,130 @@
+{% extends "./base.html" %}
+
+{% load static %}
+
+
+{% block content %}
+
+
+<style>
+    .album {
+        background-color: #000000; /* Kolor tła sekcji */
+        position: relative; /* Pozycjonowanie sekcji, pozwala na pozycjonowanie wewnętrznych elementów */
+        width: 100%; /* Szerokość sekcji */
+        height: 1200px; /* Wysokość sekcji */
+}
+
+    .album img {
+        position: absolute; /* Pozycjonowanie obrazu względem sekcji */
+        top: 50%; /* Pozycja w pionie na środku */
+        left: 50%; /* Pozycja w poziomie na środku */
+        transform: translate(-50%, -50%); /* Przemieszczenie obrazu o 50% w górę i w lewo, aby idealnie go wyśrodkować */
+        width: 1050px; /* Szerokość obrazu */
+        height: auto; /* Automatyczna wysokość, aby zachować proporcje */
+    
+}
+
+
+    .album1 {
+        background-color: #000000; /* Kolor tła sekcji */
+        position: relative; /* Pozycjonowanie sekcji, pozwala na pozycjonowanie wewnętrznych elementów */
+        width: 100%; /* Szerokość sekcji */
+        height: 1200px; /* Wysokość sekcji */
+}
+
+    .album1 img {
+        position: absolute; /* Pozycjonowanie obrazu względem sekcji */
+        top: 50%; /* Pozycja w pionie na środku */
+        left: 50%; /* Pozycja w poziomie na środku */
+        transform: translate(-50%, -50%); /* Przemieszczenie obrazu o 50% w górę i w lewo, aby idealnie go wyśrodkować */
+        width: 1050px; /* Szerokość obrazu */
+        height: auto; /* Automatyczna wysokość, aby zachować proporcje */
+}
+
+
+    .album2 {
+        background-color: #000000; /* Kolor tła sekcji */
+        position: relative; /* Pozycjonowanie sekcji, pozwala na pozycjonowanie wewnętrznych elementów */
+        width: 100%; /* Szerokość sekcji */
+        height: 1200px; /* Wysokość sekcji */
+}
+
+    .album2 img {
+        position: absolute; /* Pozycjonowanie obrazu względem sekcji */
+        top: 50%; /* Pozycja w pionie na środku */
+        left: 50%; /* Pozycja w poziomie na środku */
+        transform: translate(-50%, -50%); /* Przemieszczenie obrazu o 50% w górę i w lewo, aby idealnie go wyśrodkować */
+        width: 1050px; /* Szerokość obrazu */
+        height: auto; /* Automatyczna wysokość, aby zachować proporcje */
+}
+</style>
+
+<section class="album">
+
+    <div class="row py-lg-5">
+    
+        <div class="col-lg-6 col-md-8 mx-auto">
+            
+    
+            <a href="#">
+                <img src="../static/media/images/album.png" alt="Logo">
+            </a>
+            
+            
+            
+        </div>
+    
+    </div>
+
+
+</section>
+
+<section class="album1">
+
+    <div class="row py-lg-5">
+    
+        <div class="col-lg-6 col-md-8 mx-auto">
+            
+    
+            <a href="#">
+                <img src="../static/media/images/album1.jpg" alt="Logo">
+            </a>
+            
+            
+            
+        </div>
+    
+    </div>
+
+
+</section>
+
+
+
+<section class="album2">
+
+    <div class="row py-lg-5">
+    
+        <div class="col-lg-6 col-md-8 mx-auto">
+            
+    
+            <a href="#">
+                <img src="../static/media/images/album2.jpg" alt="Logo">
+            </a>
+            
+            
+            
+        </div>
+    
+    </div>
+
+
+</section>
+
+{% endblock %}
+
+
+
+
+
+

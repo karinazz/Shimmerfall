@@ -1,0 +1,148 @@
+
+{% extends "./base.html" %}
+
+{% load static %}
+
+
+{% block content %}
+
+
+<style>
+
+
+    .merch-store1 {
+    background-color: #000000; /* Kolor tła sekcji */
+    position: relative; /* Pozycjonowanie sekcji, pozwala na pozycjonowanie wewnętrznych elementów */
+    width: 100%; /* Szerokość sekcji */
+    height: 1200px; /* Wysokość sekcji */
+}
+
+    .merch-store1 img {
+    position: absolute; /* Pozycjonowanie obrazu względem sekcji */
+    top: 50%; /* Pozycja w pionie na środku */
+    left: 50%; /* Pozycja w poziomie na środku */
+    transform: translate(-50%, -50%); /* Przemieszczenie obrazu o 50% w górę i w lewo, aby idealnie go wyśrodkować */
+    width: 1050px; /* Szerokość obrazu */
+    height: auto; /* Automatyczna wysokość, aby zachować proporcje */
+    
+}
+
+    .merch-store {
+      background-color: #000000; /* Kolor tła sekcji */
+      position: relative; /* Pozycjonowanie sekcji, pozwala na pozycjonowanie wewnętrznych elementów */
+      width: 120%; /* Szerokość sekcji */
+      height: 1200px; /* Wysokość sekcji */
+}
+
+    .home-logo img {
+      position: absolute; /* Pozycjonowanie obrazu względem sekcji */
+      top: 50%; /* Pozycja w pionie na środku */
+      left: 40%; /* Pozycja w poziomie na środku */
+      transform: translate(-50%, -50%); /* Przemieszczenie obrazu o 50% w górę i w lewo, aby idealnie go wyśrodkować */
+      width: 1050px; /* Szerokość obrazu */
+      height: auto; /* Automatyczna wysokość, aby zachować proporcje */
+    
+}
+
+    .btn2{
+      position: absolute; /* Pozycjonowanie obrazu względem sekcji */
+      top: 80%; /* Pozycja w pionie na środku */
+      left: 50%; /* Pozycja w poziomie na środku */
+      transform: translate(-50%, -50%); /* Przemieszczenie obrazu o 50% w górę i w lewo, aby idealnie go wyśrodkować */
+      height: auto; /* Automatyczna wysokość, aby zachować proporcje */
+}
+
+</style>
+
+
+    <!-- Introduction section -->
+
+    <section class="merch-store1">
+
+      <div class="row py-lg-5">
+      
+          <div class="col-lg-6 col-md-8 mx-auto">
+              
+  
+      
+              <a href="#">
+                <img src="../static/media/images/merch3.png" alt="merch">
+              </a>
+              
+              <a href="{% url 'register' %}" class="btn btn2 btn-primary my-2"> <i class="fa fa-user-plus" aria-hidden="true"></i> &nbsp; Create an account </a>
+                
+              
+          </div>
+      
+      </div>
+  
+  
+  </section>
+  
+
+
+
+       <!-- All products section -->
+      
+       <div class="album py-5 bg-light">
+        
+        <div class="container">
+    
+          <div class="pb-3 h5"> SHIMMERFALL MERCH </div>
+
+
+          <hr>
+
+          <br>
+          
+
+          <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 g-3">
+    
+            
+            {% for product in my_products %}
+
+    
+              <div class="col">
+                
+                <div class="card shadow-sm">
+                
+                  <img class="img-fluid" alt="Responsive image" src="{{product.image.url}}">
+                
+                  <div class="card-body">
+                
+                    <p class="card-text">
+                
+                      <a class="text-info text-decoration-none" href="{{product.get_absolute_url}}"> {{ product.title | capfirst }} </a>
+                
+                    </p>
+                
+                    <div class="d-flex justify-content-between align-items-center">
+                
+                      <h5> $ {{ product.price }} </h5>
+                
+                    </div>
+                
+                  </div>
+                
+                </div>
+              
+              </div>
+    
+
+            {% endfor %}
+            
+    
+          </div>
+
+        </div>
+      
+      </div>
+
+
+{% endblock %}
+
+
+
+
+
+
