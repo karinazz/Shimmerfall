@@ -62,7 +62,7 @@ The Django project consists of four modular apps:
 
 ---
 
-## 🚀 Getting Started
+## 🚀 How to run?
 
 To run this project locally:
 
